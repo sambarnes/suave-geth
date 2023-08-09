@@ -20,7 +20,7 @@
 
 # SUAVE
 
-We introduce `suave-geth`, our work-in-progressfirst SUAVE client. The defining feature of `suave-geth` is the off-chain execution capability, enabling users to both define and use smart contracts executed before their transactions are sent to the public chain. Off-chain execution gives contracts access to additional precompiles, expanding MEV-related functionalities. This includes transaction and bundle simulation using geth RPC, building blocks, and sending blocks to boost relays. Nodes providing off-chain execution are known as "execution nodes".
+We introduce `suave-geth`, our work-in-progress SUAVE client. The defining feature of `suave-geth` is the off-chain execution capability, enabling users to both define and use smart contracts executed before their transactions are sent to the public chain. Off-chain execution gives contracts access to additional precompiles, expanding MEV-related functionalities. This includes transaction and bundle simulation using geth RPC, building blocks, and sending blocks to boost relays. Nodes providing off-chain execution are known as "execution nodes".
 
 
 ## Why would I use the suave chain?
