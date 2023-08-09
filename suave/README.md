@@ -33,7 +33,7 @@ The SUAVE Chain, an integral part of the [Centauri release](https://writings.fla
    Smart contracts on SUAVE follow the same rules as on Ethereum with the added advantage of being able to access additional precompiles during off-chain request execution. Precompiles are available through the [SUAVE library](#SUAVE-library).
 
 2. **NEW! Request off-chain execution using the new off-chain transaction feature.**  
-   Contracts requested using off-chain transactions have access to off-chain data and APIs through SUAVE precompiles. Off-chain execution is *not* reproducible on-chain, thus, users are required to whitelist a specific execution node trusted to provide the result. Eventually proofs and trusted enclaves will help to verify the results of execution.
+   Contracts requested using off-chain transactions have access to off-chain data and APIs through SUAVE precompiles. Off-chain execution is *not* reproducible on-chain, thus, users are required to whitelist a specific execution node trusted to provide the result. Eventually proofs and trusted enclaves will help to verify the results of execution.  
       After off-chain execution, the result replaces the calldata for on-chain execution. This grants different behaviors to off-chain and on-chain transactions since off-chain APIs are inaccessible during on-chain computation. 
 
 
