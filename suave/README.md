@@ -1,3 +1,13 @@
+
+
+# SUAVE
+
+SUAVE is designed to decentralize the MEV supply chain by enabling centralized infrastructure (builders, relays, centralized RFQ routing, etc.) to be programmed as smart contracts on a decentralized blockchain.
+
+`suave-geth` is a work-in-progress golang SUAVE client, consisting of two seperable components, chain nodes and execution nodes. SUAVE clients offer confidential execution for smart contracts, allowing off-chain processing with extended precompiles for enhanced MEV functionalities, including transaction simulation via geth RPC, block building, and relay boosting, all handled by dedicated execution nodes. Nodes providing confidential execution are known as "execution nodes".
+
+For a deeper dive check out the [technical details section](#suave-geth-technical-details), and for a step-by-step guide explore the [simple MEV-share walk through](cmd/README.md).
+
 **Table of Contents**
 
 1. [Getting Started](#Getting-Started)  
@@ -16,14 +26,6 @@
     2.9. [SUAVE Mempool](#SUAVE-Mempool)  
     2.10. [Notable differences from standard issue go-ethereum](#Notable-differences-from-standard-issue-go-ethereum)  
     2.11. [Suave precompiles](#SUAVE-precompiles)  
-
-# SUAVE
-
-SUAVE is designed to decentralize the MEV supply chain by enabling centralized infrastructure (builders, relays, centralized RFQ routing, etc.) to be programmed as smart contracts on a decentralized blockchain.
-
-`suave-geth` is a work-in-progress golang SUAVE client, consisting of two seperable components, chain nodes and execution nodes. SUAVE clients offer confidential execution for smart contracts, allowing off-chain processing with extended precompiles for enhanced MEV functionalities, including transaction simulation via geth RPC, block building, and relay boosting, all handled by dedicated execution nodes. Nodes providing confidential execution are known as "execution nodes".
-
-For a deeper dive check out the [technical details section](#suave-geth-technical-details), and for a step-by-step guide explore the [simple MEV-share walk through](cmd/README.md).
 
 ## Getting Started
 
