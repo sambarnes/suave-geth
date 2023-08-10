@@ -23,7 +23,7 @@ SUAVE is designed to decentralize the MEV supply chain by enabling centralized i
 
 `suave-geth` is a work-in-progress golang SUAVE client, consisting of two seperable components, chain nodes and execution nodes. SUAVE clients offer confidential execution for smart contracts, allowing off-chain processing with extended precompiles for enhanced MEV functionalities, including transaction simulation via geth RPC, block building, and relay boosting, all handled by dedicated execution nodes. Nodes providing confidential execution are known as "execution nodes".
 
-For a deeper dive check out the [technical details section](#suave-geth-technical-details) and step-by-step guide, explore the [simple MEV-share walk through](cmd/README.md).
+For a deeper dive check out the [technical details section](#suave-geth-technical-details), and for a step-by-step guide explore the [simple MEV-share walk through](cmd/README.md).
 
 ## Getting Started
 
