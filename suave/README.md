@@ -1,5 +1,3 @@
-
-
 # SUAVE
 
 SUAVE is designed to decentralize the MEV supply chain by enabling centralized infrastructure (builders, relays, centralized RFQ routing, etc.) to be programmed as smart contracts on a decentralized blockchain.
@@ -15,7 +13,7 @@ For a deeper dive check out the [technical details section](#suave-geth-technica
     1.2. [How do I execute a contract confidentially?](#How-do-I-execute-a-contract-confidentially?)  
     1.3. [How do I run a SUAVE chain node?](#How-do-I-run-a-SUAVE-chain-node?)  
     1.4. [How do I run a SUAVE execution node?](#How-do-I-run-a-SAUVE-execution-node?)  
-2. [sauve-geth technical details](#suave-geth-technical-details)  
+2. [suave-geth technical details](#suave-geth-technical-details)  
     2.2. [SUAVE Runtime (MEVM)](#Suave-Runtime-(MEVM))  
     2.3. [Confidential execution of smart contracts](#Confidential-execution-of-smart-contracts)  
     2.4. [Confidential computation requests](#Confidential-computation-requests)  
@@ -105,6 +103,8 @@ Note that simply enabling http jsonrpc and allowing direct access might not be t
 
 ## suave-geth technical details
 
+### Overview
+
 ### SUAVE Runtime (MEVM)
 
 [`SuaveExecutionBackend`](#SuaveExecutionBackend) 🤝 EVM = MEVM
@@ -133,13 +133,13 @@ graph TB
     class S orange
     class T,U purple
     class Z,V lightgreen
-    classDef yellow fill:#f6c347,stroke:#333,stroke-width:2px;
-    classDef red fill:#eaafa1,stroke:#333,stroke-width:2px;
-    classDef green fill:#96bb7c,stroke:#333,stroke-width:2px;
-    classDef blue fill:#f7ea00,stroke:#333,stroke-width:2px;
-    classDef orange fill:#ffcdab,stroke:#333,stroke-width:2px;
-    classDef purple fill:#b992c9,stroke:#333,stroke-width:2px;
-    classDef lightgreen fill:#dbd56e,stroke:#333,stroke-width:2px;
+    classDef yellow fill:#f5cf58,stroke:#444,stroke-width:2px;
+    classDef red fill:#d98686,stroke:#444,stroke-width:2px;
+    classDef green fill:#82a682,stroke:#444,stroke-width:2px;
+    classDef blue fill:#9abedc,stroke:#444,stroke-width:2px;
+    classDef orange fill:#f3b983,stroke:#444,stroke-width:2px;
+    classDef purple fill:#ab92b5,stroke:#444,stroke-width:2px;
+    classDef lightgreen fill:#b3c69f,stroke:#444,stroke-width:2px;
 ```
 
 The capabilities enabled by this modified runtime are exposed via the APIs `ConfiendialStoreBackend` , `MempoolBackend`, `ConfiendialStoreBackend`, as well as access to `confidentialInputs` to confidential computation requests and `callerStack`. 
