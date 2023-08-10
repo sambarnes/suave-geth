@@ -1,11 +1,10 @@
 **Table of Contents**
 
-1. [SUAVE](#SUAVE)  
-    1.1. [Why would I use SUAVE?](#Why-would-I-use-SUAVE?)  
-    1.2. [How do I use the SUAVE?](#How-do-I-use-SUAVE?)  
-    1.3. [How do I execute a contract confidentially?](#How-do-I-execute-a-contract-confidentially?)  
-    1.4. [How do I run a SUAVE chain node?](#How-do-I-run-a-SUAVE-chain-node?)  
-    1.5. [How do I run a SUAVE execution node?](#How-do-I-run-a-SAUVE-execution-node?)  
+1. [Getting Started](#Getting-Started)  
+    1.1. [How do I use the SUAVE?](#How-do-I-use-SUAVE?)  
+    1.2. [How do I execute a contract confidentially?](#How-do-I-execute-a-contract-confidentially?)  
+    1.3. [How do I run a SUAVE chain node?](#How-do-I-run-a-SUAVE-chain-node?)  
+    1.4. [How do I run a SUAVE execution node?](#How-do-I-run-a-SAUVE-execution-node?)  
 2. [sauve-geth technical details](#suave-geth-technical-details)  
     2.2. [SUAVE Runtime (MEVM)](#Suave-Runtime-(MEVM))  
     2.3. [Confidential execution of smart contracts](#Confidential-execution-of-smart-contracts)  
