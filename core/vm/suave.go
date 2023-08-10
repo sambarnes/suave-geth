@@ -5,7 +5,7 @@ import (
 	suave "github.com/ethereum/go-ethereum/suave/core"
 )
 
-type SuaveOffchainBackend struct {
+type SuaveExecutionBackend struct {
 	ConfiendialStoreBackend suave.ConfiendialStoreBackend
 	MempoolBackend          suave.MempoolBackend
 	OffchainEthBackend      suave.OffchainEthBackend
@@ -13,12 +13,12 @@ type SuaveOffchainBackend struct {
 	callerStack             []*common.Address
 }
 
-func NewRuntimeSuaveOffchainBackend(evm *EVM, caller common.Address) *SuaveOffchainBackend {
+func NewRuntimeSuaveExecutionBackend(evm *EVM, caller common.Address) *SuaveExecutionBackend {
 	if !evm.Config.IsOffchain {
 		return nil
 	}
 
-	return &SuaveOffchainBackend{
+	return &SuaveExecutionBackend{
 		ConfiendialStoreBackend: evm.suaveOffchainBackend.ConfiendialStoreBackend,
 		MempoolBackend:          evm.suaveOffchainBackend.MempoolBackend,
 		OffchainEthBackend:      evm.suaveOffchainBackend.OffchainEthBackend,
@@ -28,19 +28,19 @@ func NewRuntimeSuaveOffchainBackend(evm *EVM, caller common.Address) *SuaveOffch
 }
 
 // Implements PrecompiledContract for Offchain smart contracts
-type OffchainPrecompiledContractWrapper struct {
-	backend  *SuaveOffchainBackend
+type SuavePrecompiledContractWrapper struct {
+	backend  *SuaveExecutionBackend
 	contract SuavePrecompiledContract
 }
 
-func NewOffchainPrecompiledContractWrapper(backend *SuaveOffchainBackend, contract SuavePrecompiledContract) *OffchainPrecompiledContractWrapper {
-	return &OffchainPrecompiledContractWrapper{backend: backend, contract: contract}
+func NewSuavePrecompiledContractWrapper(backend *SuaveExecutionBackend, contract SuavePrecompiledContract) *SuavePrecompiledContractWrapper {
+	return &SuavePrecompiledContractWrapper{backend: backend, contract: contract}
 }
 
-func (p *OffchainPrecompiledContractWrapper) RequiredGas(input []byte) uint64 {
+func (p *SuavePrecompiledContractWrapper) RequiredGas(input []byte) uint64 {
 	return p.contract.RequiredGas(input)
 }
 
-func (p *OffchainPrecompiledContractWrapper) Run(input []byte) ([]byte, error) {
+func (p *SuavePrecompiledContractWrapper) Run(input []byte) ([]byte, error) {
 	return p.contract.RunOffchain(p.backend, input)
 }
